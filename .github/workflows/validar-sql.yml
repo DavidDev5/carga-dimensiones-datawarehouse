@@ -1,0 +1,27 @@
+
+name: Validar archivos SQL
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar SQLFluff
+        run: pip install sqlfluff
+
+      - name: Validar script de dimensiones
+        run: sqlfluff parse --dialect tsql sql/cargar_dimensiones.sql
+
+      - name: Validar script de consultas
+        run: sqlfluff parse --dialect tsql sql/verificar_dimensiones.sql
