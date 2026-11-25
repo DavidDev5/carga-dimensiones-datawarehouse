@@ -50,7 +50,8 @@ Nota: La ejecución contra un motor SQL Server real y la comprobación de regist
 
 ## Repositorio
 
-Agregar aquí el enlace del repositorio de GitHub.
+
+[Ver repositorio del proyecto](https://github.com/DavidDev5/carga-dimensiones-datawarehouse)
 
 ## Conclusión
 
